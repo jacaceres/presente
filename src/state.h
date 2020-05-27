@@ -10,12 +10,16 @@
 
 #define MINION_HP   4
 #define MINION_RAD 12
+#define MINION_PTS 10
+
 #define BRUTE_HP   12
 #define BRUTE_RAD  16
+#define BRUTE_PTS 20
 
 #define BULLET_DMG 3
 #define BULLET_SPEED 16
 #define BULLET_RAD   5
+
 
 
 // ==== PLAYER DEFINITION
@@ -70,7 +74,7 @@ typedef struct {
 state *state_new();
 
 // Updates the state of the game to the next frame.
-void state_update(level *lvl, state *sta);
+void state_update(level *lvl, state *sta, int *puntaje);
 
 // Put enemies at random in the state until it has n_enemies enemies.
 void state_populate_random(level *lvl, state *sta, int n_enemies);
